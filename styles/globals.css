@@ -14,3 +14,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  /* Your default theme */
+  --background: rgb(198, 209, 243);
+  --foreground: rgb(15, 19, 41);
+}
+
+[data-theme="dark"] {
+  --background: rgb(15, 19, 41);
+  --foreground: rgb(198, 209, 243);
+}
