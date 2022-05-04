@@ -3,7 +3,7 @@ import Footer from "./footer";
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding: 2%;
+  padding: 4%;
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -11,11 +11,16 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
+const Content = styled.div`
+  min-height: 60vh;
+  border: 1px solid turquoise;
+`;
+
 const Layout = ({ children }) => {
   return (
     <Container>
       <Navbar />
-      <>{children}</>
+      <Content>{children}</Content>
       <Footer style={{ position: "absolute", bottom: "0" }} />
     </Container>
   );

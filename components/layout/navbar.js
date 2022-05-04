@@ -12,9 +12,6 @@ const Nav = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  width: 100%;
-  top: 0px;
 `;
 
 const Menu = styled.div`
@@ -23,22 +20,21 @@ const Menu = styled.div`
   justify-content: space-between;
   width: 100%;
   border: 2px solid green;
-  margin: 2%;
 `;
 
 const LinksWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 60vw;
+  justify-content: space-evenly;
+  width: 50vw;
   margin: 0 auto;
+  border: 1px solid red;
 `;
 
 const MenuLink = styled.p`
   text-decoration: none;
   color: inherit;
   font-family: "Ubuntu", sans-serif;
-
   margin-left: 4px;
   margin-right: 4px;
   @media ${breakPoints.ms} {
@@ -47,31 +43,18 @@ const MenuLink = styled.p`
 `;
 
 const Button = styled.button`
-  outline: none;
-  border: none;
+  border: 2px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
   background: inherit;
+  margin-left: 4%;
 `;
 
 export const pages = [
   {
-    text: "Home",
+    text: "Portfolio",
     path: "/",
-  },
-  {
-    text: "About",
-    path: "/about",
-  },
-  // add dynamic catch-all routes later
-  {
-    text: "Projects",
-    path: "/projects",
-  },
-  {
-    text: "Contact",
-    path: "/contact",
   },
   {
     text: "Blog",

@@ -9,22 +9,18 @@ const Container = styled.div`
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  height: 50vh;
+  height: 60vh;
   padding: 2%;
   font-family: "Ubuntu", sans-serif;
-`;
-
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 100%;
-  border: 1px solid purple;
 `;
 
 const RoundImage = styled.div`
   overflow: hidden;
   border-radius: 50%;
+  @media ${breakPoints.ms} {
+    height: 50%;
+    width: 50%;
+  }
 `;
 
 const HeroText = styled.div`
