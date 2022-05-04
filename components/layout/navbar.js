@@ -3,20 +3,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import Logo from "../../public/logo.svg";
+import { SunIcon, MoonIcon } from "@primer/octicons-react";
+import breakPoints from "../../styling/min-widths";
+
 const Nav = styled.div`
   border: 1px solid orange;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 0px;
 `;
 
 const Menu = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  width: 60vw;
+  justify-content: space-between;
+  width: 100%;
   border: 2px solid green;
   margin: 2%;
 `;
@@ -24,25 +29,30 @@ const Menu = styled.div`
 const LinksWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  width: 100%;
+  justify-content: space-between;
+  width: 60vw;
+  margin: 0 auto;
 `;
 
 const MenuLink = styled.p`
   text-decoration: none;
   color: inherit;
   font-family: "Ubuntu", sans-serif;
-  font-size: 1.25rem;
+
+  margin-left: 4px;
+  margin-right: 4px;
+  @media ${breakPoints.ms} {
+    font-size: 1.2rem;
+  }
 `;
 
-const ToggleButton = styled.button`
+const Button = styled.button`
   outline: none;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   background: inherit;
-  margin-left: 4%;
 `;
 
 export const pages = [
@@ -58,6 +68,10 @@ export const pages = [
   {
     text: "Projects",
     path: "/projects",
+  },
+  {
+    text: "Contact",
+    path: "/contact",
   },
   {
     text: "Blog",
@@ -76,9 +90,8 @@ const Navbar = () => {
   return (
     <Nav>
       {/* Logo */}
-      <Link href="/">
-        <Image src={Logo} alt="Logo" height={100} width={100} />
-      </Link>
+
+      <Image src="/logo.svg" alt="Logo" height={100} width={100} />
 
       {/* Nav links */}
       <Menu>
@@ -90,30 +103,19 @@ const Navbar = () => {
             </MenuLink>
           ))}
         </LinksWrapper>
-        {/* Email */}
 
         {/* theme switch */}
-        <ToggleButton
+        <Button
           aria-label="Toggle Dark Mode"
           type="button"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
           {mounted && theme === "dark" ? (
-            <Image
-              src="/images/moon.png"
-              alt="Dark mode icon"
-              height={24}
-              width={24}
-            />
+            <SunIcon size={24} />
           ) : (
-            <Image
-              src="/images/sun.png"
-              alt="Light mode icon"
-              height={24}
-              width={24}
-            />
+            <MoonIcon size={24} />
           )}
-        </ToggleButton>
+        </Button>
       </Menu>
     </Nav>
   );
