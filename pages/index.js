@@ -1,5 +1,18 @@
 import Head from "next/head";
-import Hero from "../components/hero";
+import Hero from "../components/sections/hero";
+import ContactSection from "../components/sections/contact";
+import ProjectsSection from "../components/sections/projects";
+import AboutSection from "../components/sections/about";
+import styled from "styled-components";
+
+const Sections = styled.div`
+  display: flex;
+  flex-direction: column;
+  border: 4px dashed pink;
+  height: 100%;
+  width: 100%;
+`;
+
 export default function Home() {
   return (
     <>
@@ -12,7 +25,12 @@ export default function Home() {
         <link rel="icon" href="/images/32x32favicon.png" />
       </Head>
       {/* Content */}
-      <Hero />
+      <Sections>
+        <Hero />
+        <AboutSection />
+        <ProjectsSection />
+        <ContactSection />
+      </Sections>
     </>
   );
 }

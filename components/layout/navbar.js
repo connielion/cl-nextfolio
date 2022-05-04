@@ -12,6 +12,7 @@ const Nav = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 20vh;
 `;
 
 const Menu = styled.div`
@@ -31,7 +32,9 @@ const LinksWrapper = styled.div`
   border: 1px solid red;
 `;
 
-const MenuLink = styled.p`
+const MenuLink = styled.div`
+  border: 1px dashed green;
+  padding: 10px 20px;
   text-decoration: none;
   color: inherit;
   font-family: "Ubuntu", sans-serif;
@@ -58,7 +61,7 @@ export const pages = [
   },
   {
     text: "Blog",
-    path: "/blog",
+    path: "/blog/[[...slug]]",
   },
 ];
 

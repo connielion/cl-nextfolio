@@ -6,14 +6,16 @@ const Container = styled.div`
   padding: 4%;
   display: flex;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   flex-direction: column;
 `;
 
 const Content = styled.div`
-  min-height: 60vh;
+  height: 100%;
   border: 1px solid turquoise;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Layout = ({ children }) => {
@@ -21,7 +23,6 @@ const Layout = ({ children }) => {
     <Container>
       <Navbar />
       <Content>{children}</Content>
-      <Footer style={{ position: "absolute", bottom: "0" }} />
     </Container>
   );
 };

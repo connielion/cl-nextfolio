@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import Link from "next/link";
+import BackButton from "../../components/layout/back-button";
 
 const components = { SyntaxHighlighter };
 
@@ -16,7 +16,8 @@ const PostPage = ({ frontMatter: { title, description, date }, mdxSource }) => {
       <p>{description}</p>
 
       <MDXRemote {...mdxSource} components={components} />
-      <Link href="/blog">Go back</Link>
+
+      <BackButton />
     </div>
   );
 };

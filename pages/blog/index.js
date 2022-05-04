@@ -2,13 +2,18 @@ import fs from "fs";
 import * as path from "path";
 import matter from "gray-matter";
 import Posts from "../../components/layout/blog-posts";
+import styled from "styled-components";
 
+const BlogsContainer = styled.div`
+  padding: 2%;
+  font-family: Lato, sans-serif;
+`;
 const Blog = ({ posts }) => {
   return (
-    <>
+    <BlogsContainer>
       Blog home
       <Posts posts={posts} />
-    </>
+    </BlogsContainer>
   );
 };
 
