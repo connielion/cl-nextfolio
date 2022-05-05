@@ -4,12 +4,12 @@ import { useTheme } from "next-themes";
 import styled from "styled-components";
 import { SunIcon, MoonIcon } from "@primer/octicons-react";
 const Container = styled.div`
-  padding: 1%;
   display: flex;
   justify-content: center;
   height: 100%;
   width: 100%;
   flex-direction: column;
+  padding: 2%;
 `;
 
 const Content = styled.div`
@@ -19,16 +19,18 @@ const Content = styled.div`
   justify-content: center;
 `;
 const Button = styled.button`
-  border: 1px solid red;
+  color: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
   background: inherit;
   margin-left: 4%;
+  border: none;
+  outline: none;
 `;
 
 const ThemeSwitchContainer = styled.div`
-  position: absolute;
+  position: fixed;
   right: 2rem;
   top: 2rem;
 `;

@@ -16,6 +16,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
 /* default theme */
 :root {
   --background: white;
@@ -23,14 +24,20 @@ a {
 }
 
 [data-theme="dark"] {
-  background-color: #1e1e1e;
+  background-color: #537895;
+  background-image: linear-gradient(150deg, #08090a 0%, #09203f 70%);
   background-position: center;
   background-size: cover;
-  color: rgb(158, 153, 195);
+  color: rgb(172, 172, 203);
 }
 
 [data-theme="light"] {
-  color: rgb(165, 165, 165);
+  color: #09203f;
+  background: linear-gradient(
+    150deg,
+    rgba(219, 226, 240, 1),
+    rgba(255, 255, 255, 1)
+  );
   background-position: center;
   background-size: cover;
 }
@@ -38,7 +45,6 @@ a {
 /* hero section cursor blink animation */
 .blinking-cursor {
   font-weight: 100;
-  /* font-size: 5rem; */
   margin-left: 4px;
   font-weight: 400;
   color: inherit;
@@ -55,6 +61,6 @@ a {
     color: transparent;
   }
   50% {
-    color: black;
+    color: inherit;
   }
 }
