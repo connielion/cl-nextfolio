@@ -1,0 +1,12 @@
+// screen sizes of devices for media queries
+const widths = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tab: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px",
+};
+
+export default widths;
