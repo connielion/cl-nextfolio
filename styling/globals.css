@@ -25,18 +25,18 @@ a {
 
 [data-theme="dark"] {
   background-color: #537895;
-  background-image: linear-gradient(150deg, #08090a 0%, #09203f 70%);
+  background-image: linear-gradient(150deg, #08090a 0%, #09203f 100%);
   background-position: center;
   background-size: cover;
-  color: rgb(172, 172, 203);
+  color: rgb(163, 163, 193);
 }
 
 [data-theme="light"] {
-  color: #09203f;
+  color: #47515d;
   background: linear-gradient(
     150deg,
     rgba(219, 226, 240, 1),
-    rgba(255, 255, 255, 1)
+    rgb(229, 216, 197)
   );
   background-position: center;
   background-size: cover;

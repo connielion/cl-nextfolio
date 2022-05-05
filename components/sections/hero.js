@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import breakPoints from "../../styling/min-widths";
+import widths from "../../styling/min-widths";
 import TypeWriter from "react-typewriter";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
@@ -17,10 +17,10 @@ const Container = styled.div`
 `;
 
 const HeroText = styled.h1`
-  font-size: 2rem;
-  // border: 1px solid red;
-  @media ${breakPoints.ms} {
-    font-size: 4rem;
+  padding: 0 2rem 0 2rem;
+  font-size: 5rem;
+  @media (max-width: ${widths.mobileS}) {
+    font-size: 2rem;
   }
 `;
 
@@ -32,7 +32,7 @@ const Colored = styled.span`
 `;
 
 const ThemeSwitchContainer = styled.div`
-  position: fixed;
+  position: absolute;
   right: 2rem;
   top: 2rem;
 `;
@@ -43,8 +43,7 @@ const Button = styled.button`
   align-items: center;
   background: inherit;
   margin-left: 4%;
-  border: 2px solid red;
-  outline: none;
+  border: none;
 `;
 
 const Hero = () => {
