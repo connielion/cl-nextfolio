@@ -8,17 +8,15 @@ import styled from "styled-components";
 const Sections = styled.div`
   display: flex;
   flex-direction: column;
-  border: 4px dashed red;
   height: 100%;
-  width: 100%;
-  padding-left: 0 2% 0 2%;
+  width: 100vw;
 `;
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Connie Lai's Portfolio</title>
+        <title>Connie Lai&rsquo;s Portfolio</title>
         <meta
           name="description"
           content="Connie Lai's developer portfolio made with Next.js"

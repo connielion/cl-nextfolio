@@ -1,15 +1,13 @@
 import Navbar from "./navbar";
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
 import styled from "styled-components";
-import { SunIcon, MoonIcon } from "@primer/octicons-react";
+
 const Container = styled.div`
   display: flex;
   justify-content: center;
   height: 100%;
   width: 100%;
   flex-direction: column;
-  padding: 2%;
+  // padding: 2%;
 `;
 
 const Content = styled.div`
@@ -18,44 +16,10 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
 `;
-const Button = styled.button`
-  color: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: inherit;
-  margin-left: 4%;
-  border: none;
-  outline: none;
-`;
 
-const ThemeSwitchContainer = styled.div`
-  position: fixed;
-  right: 2rem;
-  top: 2rem;
-`;
 const Layout = ({ children }) => {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
   return (
     <Container>
-      <ThemeSwitchContainer>
-        <Button
-          aria-label="Toggle Dark Mode"
-          type="button"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        >
-          {mounted && theme === "dark" ? (
-            <SunIcon size={24} />
-          ) : (
-            <MoonIcon size={24} />
-          )}
-        </Button>
-      </ThemeSwitchContainer>
       <Content>{children}</Content>
       {/* bottom nav */}
       <Navbar />
