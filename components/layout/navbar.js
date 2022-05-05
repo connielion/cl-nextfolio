@@ -1,18 +1,15 @@
 import styled from "styled-components";
-import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
-import { SunIcon, MoonIcon } from "@primer/octicons-react";
-import breakPoints from "../../styling/min-widths";
+import widths from "../../styling/min-widths";
+import pages from "../../util/navLinks";
+import { useRouter } from "next/router";
 
 const Nav = styled.div`
-  border: 1px solid orange;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 20vh;
+  height: 10%;
 `;
 
 const Menu = styled.div`
@@ -34,64 +31,58 @@ const LinksWrapper = styled.div`
 
 const MenuLink = styled.div`
   border: 1px dashed green;
-  padding: 10px 20px;
+  padding: 2px 4px;
   text-decoration: none;
   color: inherit;
   font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
   margin-left: 4px;
   margin-right: 4px;
-  @media ${breakPoints.ms} {
-    font-size: 1.2rem;
+  @media ${widths.desktop} {
+    font-size: 1.25rem;
+  }
+`;
+const ActiveLink = styled.div`
+  padding: 2px 4px;
+  text-decoration: underline;
+  color: inherit;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+  margin-left: 4px;
+  margin-right: 4px;
+  @media ${widths.desktop} {
+    font-size: 1.25rem;
   }
 `;
 
-const Button = styled.button`
-  border: 2px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: inherit;
-  margin-left: 4%;
-`;
-
-export const pages = [
-  {
-    text: "Portfolio",
-    path: "/",
-  },
-  {
-    text: "Blog",
-    path: "/blog/[[...slug]]",
-  },
-];
-
 const Navbar = () => {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
+  const router = useRouter(); // for conditional rendering of nav links
   return (
     <Nav>
-      {/* Logo */}
-
-      <Image src="/logo.svg" alt="Logo" height={100} width={100} />
-
-      {/* Nav links */}
       <Menu>
         {/* pages */}
         <LinksWrapper>
-          {pages?.map((item, i) => (
-            <MenuLink key={i}>
-              <Link href={item.path}>{item.text}</Link>
-            </MenuLink>
-          ))}
+          {pages?.map((item, i) => {
+            return router.asPath === item.path ? (
+              <ActiveLink key={i}>
+                {" "}
+                <Link href={item.path}>{item.text}</Link>
+              </ActiveLink>
+            ) : (
+              <MenuLink key={i}>
+                <Link href={item.path}>{item.text}</Link>
+              </MenuLink>
+            );
+          })}
+          <MenuLink>
+            <a href="https://github.com/connielion" rel="noopener noreferrer">
+              Github
+            </a>
+          </MenuLink>
         </LinksWrapper>
 
         {/* theme switch */}
-        <Button
+        {/* <Button
           aria-label="Toggle Dark Mode"
           type="button"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -101,7 +92,7 @@ const Navbar = () => {
           ) : (
             <MoonIcon size={24} />
           )}
-        </Button>
+        </Button> */}
       </Menu>
     </Nav>
   );

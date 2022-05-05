@@ -1,6 +1,6 @@
-import Image from "next/image";
 import styled from "styled-components";
 import breakPoints from "../../styling/min-widths";
+import TypeWriter from "react-typewriter";
 
 const Container = styled.div`
   border: 2px dashed yellow;
@@ -9,26 +9,38 @@ const Container = styled.div`
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  height: 60vh;
+  height: 100vh;
   padding: 2%;
   font-family: "Ubuntu", sans-serif;
 `;
 
-const HeroText = styled.div`
-  font-size: 2.5rem;
-  border: 1px solid red;
+const HeroText = styled.h1`
+  font-size: 2rem;
+  // border: 1px solid red;
   @media ${breakPoints.ms} {
-    font-size: 1.2rem;
+    font-size: 4rem;
   }
+`;
+
+const Colored = styled.span`
+  background-image: linear-gradient(135deg, #3c50c1 0%, #22b6b3 100%);
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 const Hero = () => {
   return (
-    <Container>
+    <Container className="animate__animated animate__fadeIn">
+      {/* <TypeWriter typing={1}> */}
       <HeroText>
-        <h1>Hi, I am Connie Lai. :D</h1>
-        <h2>I am full-stack developer.</h2>
+        Hi, my name is <Colored>Connie Lai</Colored>.
+        <br />I am a{" "}
+        <span className="text-color-main"> full-stack developer.</span>
+        {/* cursor blinking */}
+        <span className="blinking-cursor">|</span>
       </HeroText>
+      {/* </TypeWriter> */}
     </Container>
   );
 };

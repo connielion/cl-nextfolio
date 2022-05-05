@@ -1,5 +1,5 @@
 // screen sizes of devices for media queries
-const width = {
+const widths = {
   mobileS: "320px",
   mobileM: "375px",
   mobileL: "425px",
@@ -9,14 +9,4 @@ const width = {
   desktop: "2560px",
 };
 
-const breakPoints = {
-  ms: `(min-width: ${width.mobileS})`,
-  mm: `(min-width: ${width.mobileM})`,
-  ml: `(min-width: ${width.mobileL})`,
-  tablet: `(min-width: ${width.tab})`,
-  laptop: `(min-width: ${width.laptop})`,
-  laptopL: `(min-width: ${width.laptopL})`,
-  desktop: `(min-width: ${width.desktop})`,
-};
-
-export default breakPoints;
+export default widths;

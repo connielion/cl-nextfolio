@@ -17,7 +17,7 @@ const PostPage = ({ frontMatter: { title, description, date }, mdxSource }) => {
 
       <MDXRemote {...mdxSource} components={components} />
 
-      <BackButton />
+      <BackButton backTo={"/blog"} />
     </div>
   );
 };

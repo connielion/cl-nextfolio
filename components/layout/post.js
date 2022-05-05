@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { date } from "../util/date";
+import { date } from "../../util/date";
 
 const Container = styled.div`
   display: flex;

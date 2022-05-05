@@ -32,6 +32,11 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          {/* animate.css */}
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          />
           {/* Google fonts: Lato, Ubuntu */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
