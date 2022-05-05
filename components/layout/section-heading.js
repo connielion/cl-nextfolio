@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import widths from "../../styling/min-widths";
+import widths from "../../styling/device-sizes";
 
 const Heading = styled.h2`
   color: #eee;

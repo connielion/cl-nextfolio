@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import Link from "next/link";
-import widths from "../../styling/min-widths";
+import widths from "../../styling/device-sizes";
 import pages from "../../util/navLinks";
 import { useRouter } from "next/router";
-
+import { MarkGithubIcon } from "@primer/octicons-react";
 const Nav = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 10%;
+  border: 1px solid red;
 `;
 
 const Menu = styled.div`
@@ -57,42 +57,26 @@ const ActiveLink = styled.div`
 
 const Navbar = () => {
   const router = useRouter(); // for conditional rendering of nav links
+
   return (
     <Nav>
       <Menu>
-        {/* pages */}
+        {/* bottom links */}
         <LinksWrapper>
           {pages?.map((item, i) => {
-            return router.asPath === item.path ? (
-              <ActiveLink key={i}>
-                {" "}
-                <Link href={item.path}>{item.text}</Link>
-              </ActiveLink>
-            ) : (
+            return router.route === item.path ? null : (
               <MenuLink key={i}>
                 <Link href={item.path}>{item.text}</Link>
               </MenuLink>
             );
           })}
           <MenuLink>
-            <a href="https://github.com/connielion" rel="noopener noreferrer">
-              Github
-            </a>
+            <a
+              href="https://github.com/connielion"
+              rel="noopener noreferrer"
+            ></a>
           </MenuLink>
         </LinksWrapper>
-
-        {/* theme switch */}
-        {/* <Button
-          aria-label="Toggle Dark Mode"
-          type="button"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        >
-          {mounted && theme === "dark" ? (
-            <SunIcon size={24} />
-          ) : (
-            <MoonIcon size={24} />
-          )}
-        </Button> */}
       </Menu>
     </Nav>
   );

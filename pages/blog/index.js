@@ -5,7 +5,9 @@ import Posts from "../../components/layout/blog-posts";
 import styled from "styled-components";
 
 const BlogsContainer = styled.div`
-  padding: 2%;
+  padding-top: 4%;
+  width: 80vw;
+  margin: 0 auto;
   font-family: Lato, sans-serif;
 `;
 const Blog = ({ posts }) => {

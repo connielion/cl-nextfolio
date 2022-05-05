@@ -12,12 +12,18 @@ const Wrapper = styled.div`
     url("/images/hk.jpeg");
   background-position: center;
   background-size: cover;
-  color: $white-color;
+  color: #eee;
   height: 100vh;
   border-top: 0px;
   padding-top: 4rem;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+`;
+
+const Content = styled.div`
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
 `;
 const AboutSection = () => {
   return (

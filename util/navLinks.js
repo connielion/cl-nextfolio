@@ -5,7 +5,7 @@ const pages = [
   },
   {
     text: "Blog",
-    path: "/blog/[[...slug]]",
+    path: "/blog",
   },
 ];
 export default pages;

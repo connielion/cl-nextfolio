@@ -1,26 +1,28 @@
 import styled from "styled-components";
-import widths from "../../styling/min-widths";
-import TypeWriter from "react-typewriter";
+import widths from "../../styling/device-sizes";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { SunIcon, MoonIcon } from "@primer/octicons-react";
+
 const Container = styled.div`
-  // border: 2px dashed yellow;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   height: 100vh;
-  padding: 2%;
   font-family: "Ubuntu", sans-serif;
 `;
 
-const HeroText = styled.h1`
-  padding: 0 2rem 0 2rem;
-  font-size: 5rem;
-  @media (max-width: ${widths.mobileS}) {
-    font-size: 2rem;
+const HeroText = styled.div`
+  font-size: 2rem;
+  width: 80vw;
+  flex-wrap: wrap;
+  @media (max-width: ${widths.desktop}) {
+    font-size: 5rem;
+  }
+  @media (max-width: ${widths.mobileL}) {
+    font-size: 2.5rem;
   }
 `;
 
@@ -55,7 +57,15 @@ const Hero = () => {
   }, []);
   return (
     <Container>
-      {/* <TypeWriter typing={1}> */}
+      {/* theme switch 
+      
+      
+
+<FontAwesomeIcon icon="fa-solid fa-brightness" />
+
+<FontAwesomeIcon icon="fa-solid fa-brightness-low" />
+
+      */}
       <ThemeSwitchContainer>
         <Button
           aria-label="Toggle Dark Mode"
@@ -69,14 +79,15 @@ const Hero = () => {
           )}
         </Button>
       </ThemeSwitchContainer>
+      {/* Content */}
+
       <HeroText className="animate__animated animate__fadeIn">
-        Hi, my name is <Colored>Connie Lai</Colored>.
+        Hi! I am <Colored>Connie Lai</Colored>.
         <br />I am a{" "}
         <span className="text-color-main"> full-stack developer.</span>
         {/* cursor blinking */}
         <span className="blinking-cursor">|</span>
       </HeroText>
-      {/* </TypeWriter> */}
     </Container>
   );
 };
