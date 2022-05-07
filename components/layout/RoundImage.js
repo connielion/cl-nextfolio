@@ -5,10 +5,19 @@ const Round = styled.div`
   overflow: hidden;
   border-radius: 4%;
   position: relative !important;
+  height: 150px;
+  width: 150px;
   max-height: 180px;
   max-width: 180px;
+  padding: 2rem;
   display: block;
+  border: 1px solid red;
+  margin-top: 1rem;
   @media (min-width: ${widths.tab}) {
+    min-height: 250px;
+    min-width: 250px;
+  }
+  @media (min-width: ${widths.laptop}) {
     min-height: 300px;
     min-width: 300px;
   }

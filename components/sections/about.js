@@ -16,44 +16,47 @@ const Wrapper = styled.section`
   background-size: cover;
   color: #eee;
   height: auto;
-  padding-bottom: 4.5rem;
+  padding-bottom: 2.5rem;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-
+  padding: 4.5rem;
   @media (min-width: ${widths.laptop}) {
     height: 100vh;
-    padding-bottom: 0 2rem 5rem 2rem;
+    padding: 1rem 2rem 5rem 2rem;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   }
 `;
 
 const Content = styled.div`
-  height: 80%;
-  width: 80%;
-  margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border: 2px solid red;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px dashed yellow;
+  padding: 0;
+  margin: 0;
+  @media (min-width: ${widths.tab}) {
+    flex-direction: row;
+  }
 `;
 
 const ImageColumn = styled.div`
   display: flex;
   flex-direction: column;
-
   justify-content: space-between;
   flex-wrap: wrap;
-
-  height: 100%;
-  border: 2px solid red;
+  align-items: center;
+  @media (min-width: ${widths.laptop}) {
+    padding: 4.5rem;
+  }
 `;
 
 const Text = styled.div`
   font-size: 1rem;
-  width: 100%;
+  border: 2px solid white;
   @media (min-width: ${widths.tab}) {
     font-size: 1.25rem;
+    padding: 4.5rem;
   }
 `;
 const AboutSection = () => {
