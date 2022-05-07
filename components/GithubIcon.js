@@ -1,16 +1,25 @@
-import GithubSVG from "../public/github-brands.svg";
 import styled from "styled-components";
-
+import Image from "next/image";
+import { useTheme } from "next-themes";
 const Icon = styled.div`
-  height: 2rem;
-  width: 2rem;
-  padding: 1rem;
-  fill: ;
+  position: relative;
+  border-radius: 8px;
+  ${({ theme }) =>
+    theme === "light" &&
+    `
+  background: #1d1d1d;
+`}
 `;
-const GithubIcon = () => (
-  <Icon>
-    <GithubSVG />
-  </Icon>
-);
+const GithubIcon = () => {
+  const { theme } = useTheme();
+  console.log(theme, "current theme");
+  return (
+    <Icon theme={theme}>
+      <a href="https://github.com/connielion" rel="noopener noreferrer">
+        {/* <GithubIcon /> */}
+      </a>
+    </Icon>
+  );
+};
 
 export default GithubIcon;
