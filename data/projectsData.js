@@ -2,7 +2,7 @@ import { nanoid } from "nanoid";
 export const projects = [
   {
     id: nanoid(),
-    img: "projects/kovvi-la_data.png",
+    img: "/images/projects/kovvi-la_data.png",
     title: "Kovvi",
     info: "A cross-platform mobile app (works for iOS and Android) that provides COVID statistics from across the world.",
     info2:
@@ -12,7 +12,7 @@ export const projects = [
   },
   {
     id: nanoid(),
-    img: "projects/omnomnom.png",
+    img: "/images/projects/omnomnom.png",
     title: "Omnomnom",
     info: "A simple recipe app that allows users to pick ingredients they have and get the recipes they need.",
     info2: "Made with React and Spoonacular.",
@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     id: nanoid(),
-    img: "projects/toadtv.png",
+    img: "/images/projects/toadtv.png",
     title: "ToadTV",
     info: "A responsive front-end React app displaying movie data from OMDB API.",
     info2:
@@ -31,7 +31,7 @@ export const projects = [
   },
   {
     id: nanoid(),
-    img: "projects/auxpack.png",
+    img: "/images/projects/auxpack.png",
     title: "Auxpack",
     info: "A dashboard built with D3.js and React for monitoring Webpack build stats.",
     info2:

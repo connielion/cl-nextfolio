@@ -1,16 +1,28 @@
 import styled from "styled-components";
 import Image from "next/image";
+import BorderButton from "./border-button";
+import Link from "next/link";
+import widths from "../../styling/device-sizes";
 const Container = styled.div`
-  border: 1px solid red;
+  border: 1px dashed red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 4%;
+  width: 60%;
+  margin: 0 auto;
 `;
 
-const TextSection = style.div`
+const TextSection = styled.div`
   font-family: "Lato", sans-serif;
   font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 2px dashed green;
+  @media (min-width: ${widths.laptop}) {
+    width: 40%;
+  }
 `;
 
 const Title = styled.p`
@@ -18,18 +30,48 @@ const Title = styled.p`
   font-weight: bold;
   font-size: 2rem;
 `;
+const ImgContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  border: 2px solid white;
+`;
 
-const ProjectCard = () => {
+const ProjectCard = ({ title, info, info2, img, repo, url }) => {
   return (
     <Container>
       <TextSection>
-        <Title>Covid Mapper</Title>
-        <p>This is a mobile app.</p>
+        <Title>{title}</Title>
+        <p>{info}</p>
+        <br />
+        <p>{info2}</p>
+        <>
+          {repo.length > 0 ? (
+            <BorderButton>
+              <Link href={repo ? repo : "#"}>Source Code</Link>
+            </BorderButton>
+          ) : (
+            <></>
+          )}
+          {url.length > 0 ? (
+            <BorderButton>
+              <Link href={url ? url : "#"}>
+                {url ? "Live" : "Coming Soon..."}
+              </Link>
+            </BorderButton>
+          ) : (
+            <></>
+          )}
+        </>
       </TextSection>
-      <Image
-        src="/images/projects/kovvi-la_data.png"
-        alt="screenshot of a project"
-      />
+      <ImgContainer>
+        <Image
+          src={img}
+          alt={`screenshot of ${title}`}
+          layout={"fill"}
+          height={200}
+          width={400}
+        />
+      </ImgContainer>
     </Container>
   );
 };
