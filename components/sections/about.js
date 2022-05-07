@@ -32,7 +32,6 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border: 1px dashed yellow;
   padding: 0;
   margin: 0;
   @media (min-width: ${widths.tab}) {
@@ -53,10 +52,9 @@ const ImageColumn = styled.div`
 
 const Text = styled.div`
   font-size: 1rem;
-  border: 2px solid white;
+  padding-left: 1rem;
   @media (min-width: ${widths.tab}) {
     font-size: 1.2rem;
-    padding: 4.5rem;
   }
 `;
 const AboutSection = () => {
@@ -99,14 +97,3 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
-
-{
-  /* <RoundImage>
-<Image
-  src="/images/dogs.jpeg"
-  alt="me with a dog mask and a choco laborador named Hugo"
-  layout="fill"
-  priority
-/>
-</RoundImage> */
-}

@@ -11,11 +11,10 @@ const Round = styled.div`
   max-width: 180px;
   padding: 2rem;
   display: block;
-  border: 1px solid red;
   margin-top: 1rem;
   @media (min-width: ${widths.tab}) {
-    min-height: 250px;
-    min-width: 250px;
+    min-height: 240px;
+    min-width: 240px;
   }
   @media (min-width: ${widths.laptop}) {
     min-height: 300px;
