@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-export const projectsData = [
+export const projects = [
   {
     id: nanoid(),
     img: "projects/kovvi-la_data.png",

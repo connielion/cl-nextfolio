@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import SectionHeading from "../layout/section-heading";
-import { projectsData } from "../../data/projectsData";
+import { projects } from "../../data/projectsData";
+
 const Wrapper = styled.section`
   min-height: 100vh;
   margin-top: -30rem;

@@ -8,7 +8,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   font-family: "Ubuntu", sans-serif;
   background-position: center;
   background-size: cover;
@@ -74,11 +75,11 @@ const Hero = () => {
         <span className="blinking-cursor">|</span>
       </HeroText>
       {/* View Projects button */}
-      {/* <HeroBtn>
+      <HeroBtn>
         <Link href="/#projects-section" scroll={false}>
           View Projects
         </Link>
-      </HeroBtn> */}
+      </HeroBtn>
     </Container>
   );
 };
