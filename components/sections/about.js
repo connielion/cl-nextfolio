@@ -55,7 +55,7 @@ const Text = styled.div`
   font-size: 1rem;
   border: 2px solid white;
   @media (min-width: ${widths.tab}) {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     padding: 4.5rem;
   }
 `;
