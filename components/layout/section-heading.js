@@ -2,7 +2,7 @@ import styled from "styled-components";
 import widths from "../../styling/device-sizes";
 
 const Heading = styled.h2`
-  color: #eee;
+  color: inherit;
   text-align: center;
   font-size: 2rem;
   font-weight: bold;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import SectionHeading from "../layout/section-heading";
 const Wrapper = styled.div`
   min-height: 100vh;
   margin-top: -30rem;
@@ -8,6 +8,10 @@ const Wrapper = styled.div`
   padding-bottom: 20rem;
 `;
 const ProjectsSection = () => {
-  return <>projects section</>;
+  return (
+    <Wrapper id="projects">
+      <SectionHeading>Projects I contributed to...</SectionHeading>
+    </Wrapper>
+  );
 };
 export default ProjectsSection;
