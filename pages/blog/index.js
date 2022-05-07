@@ -3,6 +3,7 @@ import * as path from "path";
 import matter from "gray-matter";
 import Posts from "../../components/layout/blog-posts";
 import styled from "styled-components";
+import SectionHeading from "../../components/layout/section-heading";
 
 const BlogsContainer = styled.div`
   padding-top: 4%;
@@ -13,7 +14,7 @@ const BlogsContainer = styled.div`
 const Blog = ({ posts }) => {
   return (
     <BlogsContainer>
-      Blog home
+      <SectionHeading>Connie&#39;s Tech Blog</SectionHeading>
       <Posts posts={posts} />
     </BlogsContainer>
   );

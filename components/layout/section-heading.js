@@ -3,16 +3,16 @@ import widths from "../../styling/device-sizes";
 
 const Heading = styled.h2`
   color: #eee;
-  margin-bottom: 4.5rem;
-  text-transform: uppercase;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  text-transform: uppercase;
   font-family: "Ubuntu", sans-serif;
-  @media (max-width: ${widths.ms}) {
-    font-size: 2rem;
-  } ;
+  @media (min-width: ${widths.tab}) {
+    font-size: 3rem;
+  }
+  @media (min-width: ${widths.desktop}) {
+    font-size: 4rem;
+  }
 `;
 
 const SectionHeading = ({ children }) => (
