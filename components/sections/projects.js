@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import SectionHeading from "../layout/section-heading";
-const Wrapper = styled.div`
+import { projectsData } from "../../data/projectsData";
+const Wrapper = styled.section`
   min-height: 100vh;
   margin-top: -30rem;
   margin-bottom: -25rem;
@@ -9,7 +10,7 @@ const Wrapper = styled.div`
 `;
 const ProjectsSection = () => {
   return (
-    <Wrapper id="projects">
+    <Wrapper id="projects-section">
       <SectionHeading>Projects I contributed to...</SectionHeading>
     </Wrapper>
   );

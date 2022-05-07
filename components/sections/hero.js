@@ -16,7 +16,7 @@ const Container = styled.div`
 
 const HeroText = styled.div`
   font-size: 2rem;
-  width: 80vw;
+  width: 70vw;
   flex-wrap: wrap;
   text-align: center;
   @media (max-width: ${widths.desktop}) {
@@ -41,6 +41,7 @@ const Colored = styled.span`
 `;
 
 const HeroBtn = styled.span`
+  margin-top: 0.8rem;
   background-image: linear-gradient(135deg, #3c50c1 0%, #22b6b3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -68,16 +69,16 @@ const Hero = () => {
       {/* Content start */}
       <HeroText className="animate__animated animate__fadeIn">
         Hi! I am <Colored>Connie Lai</Colored>.
-        <br />I am a <Colored>full-stack developer.</Colored>
+        <br />I am a <Colored>React developer.</Colored>
         {/* cursor blinking */}
         <span className="blinking-cursor">|</span>
       </HeroText>
       {/* View Projects button */}
-      <HeroBtn>
-        <Link href="/#projects" scroll={false}>
+      {/* <HeroBtn>
+        <Link href="/#projects-section" scroll={false}>
           View Projects
         </Link>
-      </HeroBtn>
+      </HeroBtn> */}
     </Container>
   );
 };

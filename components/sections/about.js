@@ -4,6 +4,7 @@ import Image from "next/image";
 import SectionHeading from "../layout/section-heading";
 import widths from "../../styling/device-sizes";
 import aboutData from "../../data/aboutData";
+
 const Wrapper = styled.section`
   background: linear-gradient(
       100deg,
@@ -28,35 +29,36 @@ const Wrapper = styled.section`
 `;
 
 const Content = styled.div`
-  border: 2px solid yellow;
   height: 80%;
   width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  @media (min-width: ${widths.laptop}) {
-  } ;
+  justify-content: center;
+  border: 2px solid red;
 `;
 
 const ImageColumn = styled.div`
   display: flex;
   flex-direction: column;
+
   justify-content: space-between;
   flex-wrap: wrap;
+
+  height: 100%;
+  border: 2px solid red;
 `;
 
 const Text = styled.div`
   font-size: 1rem;
-  overflow: hidden;
+  width: 100%;
   @media (min-width: ${widths.tab}) {
     font-size: 1.25rem;
-    max-width: 70%;
   }
 `;
 const AboutSection = () => {
   return (
-    <Wrapper id="about">
+    <Wrapper id="about-section">
       <SectionHeading>About Connie</SectionHeading>
       <Content>
         <ImageColumn>
@@ -78,11 +80,15 @@ const AboutSection = () => {
           </RoundImage>
         </ImageColumn>
         <Text>
-          <p>Yes, that's me on the right. Dogfooding? ✅ </p>
+          <p> Dogfooding? ✅ </p>
 
-          {aboutData.map((p, i) => {
-            return <p key={i}>{p}</p>;
-          })}
+          {aboutData ? (
+            aboutData?.map((p, i) => {
+              return <p key={i}>{p}</p>;
+            })
+          ) : (
+            <>Loading...</>
+          )}
         </Text>
       </Content>
     </Wrapper>

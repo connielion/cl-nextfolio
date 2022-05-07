@@ -2,7 +2,7 @@
 const getAllPostIds = () => {
   const fileNames = fs.readdirSync(PostDirectory);
 
-  return fileNames.map((name) => {
+  return fileNames?.map((name) => {
     params: {
       id: fileNames.replace(/\.md$/, ""); // replace .md file extension for slug
     }

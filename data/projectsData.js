@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 export const projectsData = [
   {
     id: nanoid(),
