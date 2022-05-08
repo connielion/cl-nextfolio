@@ -15,7 +15,7 @@ const BlogsContainer = styled.div`
 const Blog = ({ posts }) => {
   return (
     <BlogsContainer>
-      <SectionHeading>Connie&#39;s Tech Blog</SectionHeading>
+      <SectionHeading>Connie&#39;s Blog</SectionHeading>
       {/* list of blog posts */}
       <Posts posts={posts} />
     </BlogsContainer>

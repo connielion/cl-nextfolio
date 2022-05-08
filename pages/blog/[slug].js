@@ -36,7 +36,6 @@ const PostPage = ({ frontMatter: { title, description, date }, mdxSource }) => {
           <h1>{title}</h1>
           <p>{date}</p>
           <p>{description}</p>
-
           <MDXRemote {...mdxSource} components={components} />
         </div>
       </Content>

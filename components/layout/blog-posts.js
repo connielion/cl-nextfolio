@@ -23,13 +23,27 @@ const Article = styled.div`
     border: 1px solid #535467;
   }
 `;
+
+const Tags = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+`;
+const Tag = styled.span`
+  padding: 0.2rem 0.8rem;
+  background-color: #1d1d1d;
+  color: #ddd;
+  border-radius: 0.2rem;
+  margin: 0.2rem;
+`;
 const Posts = ({ posts }) => {
   return (
     <Container>
       {posts?.map((file, i) => {
         // for each file, access metadata(title/description/date/etc.) under `frontMatter` object
         const { frontMatter } = file;
-        const { title, description, date } = frontMatter;
+        const { title, description, date, tags } = frontMatter;
         return (
           <Link href={"/blog/" + file.slug} key={i} passHref>
             <Article>
@@ -37,6 +51,12 @@ const Posts = ({ posts }) => {
                 <h2>{title}</h2>
                 <p>{date}</p>
                 <p>{description}</p>
+                <Tags>
+                  {" "}
+                  {tags.map((tag, i) => (
+                    <Tag key={i}>{tag} </Tag>
+                  ))}
+                </Tags>
               </div>
             </Article>
           </Link>
