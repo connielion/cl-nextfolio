@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Image from "next/image";
 import BorderButton from "./border-button";
 import widths from "../../styling/device-sizes";
-
 const Container = styled.div`
   display: flex;
   flex-direction: row;
