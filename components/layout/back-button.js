@@ -5,7 +5,7 @@ const Button = styled.span`
   padding: 4px;
   font-size: Ubuntu, sans-serif;
   :hover {
-    color: #eee;
+    color: orange;
   }
 `;
 

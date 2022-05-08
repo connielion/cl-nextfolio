@@ -6,6 +6,7 @@ import { MDXRemote } from "next-mdx-remote";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import BackButton from "../../components/layout/back-button";
 
+// This is the component that renders blog article content
 const components = { SyntaxHighlighter };
 
 const PostPage = ({ frontMatter: { title, description, date }, mdxSource }) => {
