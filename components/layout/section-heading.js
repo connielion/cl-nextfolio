@@ -4,7 +4,7 @@ import widths from "../../styling/device-sizes";
 const Heading = styled.h2`
   color: inherit;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   font-family: "Ubuntu", sans-serif;
   @media (min-width: ${widths.tab}) {
