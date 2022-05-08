@@ -13,7 +13,6 @@ const Nav = styled.div`
   justify-content: center;
   align-items: center;
   height: 20vh;
-  border: 1px dashed yellow;
 `;
 
 const Menu = styled.div`

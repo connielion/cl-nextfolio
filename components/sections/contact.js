@@ -8,11 +8,10 @@ const Wrapper = styled.div`
   margin-top: -25rem;
   margin-bottom: -1px;
   color: #eee;
+  margin-top: 3rem;
 `;
-// const ContactSection = () => {
-//   return <Wrapper>Contact section</Wrapper>;
-// };
 const ContactSection = () => {
-  return <>Contact section</>;
+  return <Wrapper>Contact section</Wrapper>;
 };
+
 export default ContactSection;

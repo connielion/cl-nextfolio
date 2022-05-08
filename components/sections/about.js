@@ -33,9 +33,11 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   padding: 0;
-  margin: 0;
+  width: 100%;
   @media (min-width: ${widths.tab}) {
     flex-direction: row;
+    margin: 0 auto;
+    width: 80vw;
   }
 `;
 
@@ -46,7 +48,8 @@ const ImageColumn = styled.div`
   flex-wrap: wrap;
   align-items: center;
   @media (min-width: ${widths.laptop}) {
-    padding: 4.5rem;
+    padding: 0.5rem;
+    margin: 0 2rem 2rem 2rem;
   }
 `;
 
