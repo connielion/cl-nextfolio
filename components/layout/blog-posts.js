@@ -51,6 +51,7 @@ const Posts = ({ posts }) => {
                 <h2>{title}</h2>
                 <p>{date}</p>
                 <p>{description}</p>
+                {/* rendering tags of each post */}
                 <Tags>
                   {" "}
                   {tags.map((tag, i) => (
