@@ -1,11 +1,11 @@
 const pages = [
   {
-    text: "Portfolio",
+    text: "My Portfolio",
     path: "/",
   },
   {
     text: "Blog",
-    path: "/blog/[[...slug]]",
+    path: "/blog",
   },
 ];
 export default pages;

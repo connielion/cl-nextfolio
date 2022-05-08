@@ -28,16 +28,12 @@ a {
   background-image: linear-gradient(150deg, #08090a 0%, #161c24 100%);
   background-position: center;
   background-size: cover;
-  color: rgb(163, 163, 193);
+  color: rgb(137, 137, 162);
 }
 
 [data-theme="light"] {
-  color: #4b5867;
-  background: linear-gradient(
-    150deg,
-    rgba(219, 226, 240, 1),
-    rgb(229, 216, 197)
-  );
+  color: #355274;
+  background: linear-gradient(150deg, rgb(217, 229, 255), rgb(255, 252, 252));
   background-position: center;
   background-size: cover;
 }

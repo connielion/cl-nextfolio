@@ -1,26 +1,36 @@
 import styled from "styled-components";
-import widths from "../../styling/min-widths";
-import TypeWriter from "react-typewriter";
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
-import { SunIcon, MoonIcon } from "@primer/octicons-react";
+import widths from "../../styling/device-sizes";
+import Link from "next/link";
+import BorderButton from "../layout/border-button";
 const Container = styled.div`
-  // border: 2px dashed yellow;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 100vh;
-  padding: 2%;
+  min-height: 100vh;
+  height: 100%;
   font-family: "Ubuntu", sans-serif;
+  background-position: center;
+  background-size: cover;
 `;
 
-const HeroText = styled.h1`
-  padding: 0 2rem 0 2rem;
-  font-size: 5rem;
+const HeroText = styled.div`
+  font-size: 2rem;
+  width: 70vw;
+  flex-wrap: wrap;
+  text-align: center;
+  @media (max-width: ${widths.desktop}) {
+    font-size: 5rem;
+  }
+  @media (max-width: ${widths.tab}) {
+    font-size: 4rem;
+  }
+  @media (max-width: ${widths.mobileL}) {
+    font-size: 2.5rem;
+  }
   @media (max-width: ${widths.mobileS}) {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 `;
 
@@ -31,52 +41,23 @@ const Colored = styled.span`
   -webkit-text-fill-color: transparent;
 `;
 
-const ThemeSwitchContainer = styled.div`
-  position: absolute;
-  right: 2rem;
-  top: 2rem;
-`;
-const Button = styled.button`
-  color: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: inherit;
-  margin-left: 4%;
-  border: none;
-`;
-
 const Hero = () => {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
   return (
     <Container>
-      {/* <TypeWriter typing={1}> */}
-      <ThemeSwitchContainer>
-        <Button
-          aria-label="Toggle Dark Mode"
-          type="button"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        >
-          {mounted && theme === "dark" ? (
-            <SunIcon size={24} />
-          ) : (
-            <MoonIcon size={24} />
-          )}
-        </Button>
-      </ThemeSwitchContainer>
+      {/* Content start */}
       <HeroText className="animate__animated animate__fadeIn">
-        Hi, my name is <Colored>Connie Lai</Colored>.
-        <br />I am a{" "}
-        <span className="text-color-main"> full-stack developer.</span>
+        Hi! I am <Colored>Connie Lai</Colored>.
+        <br />I am a <Colored>React developer.</Colored>
         {/* cursor blinking */}
         <span className="blinking-cursor">|</span>
       </HeroText>
-      {/* </TypeWriter> */}
+      {/* View Projects button */}
+      <BorderButton>
+        {" "}
+        <Link href="/#projects-section" scroll={false}>
+          View Projects
+        </Link>
+      </BorderButton>
     </Container>
   );
 };

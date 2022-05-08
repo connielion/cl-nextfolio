@@ -1,7 +1,7 @@
 import { useParallax } from "react-scroll-parallax";
 import Image from "next/image";
 import styled from "styled-components";
-
+import { nanoid } from "nanoid";
 const icons = [
   {
     url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg",
@@ -27,9 +27,15 @@ const icons = [
     url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
     alt: "django icon",
   },
-].map((icon, i) => {
+].map((icon) => {
   return (
-    <Image src={icon.url} alt={`${icon.alt}`} height={32} width={32} key={i} />
+    <Image
+      src={icon.url}
+      alt={`${icon.alt}`}
+      height={32}
+      width={32}
+      key={nanoid()}
+    />
   );
 });
 

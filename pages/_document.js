@@ -32,6 +32,11 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta
+            name="description"
+            content="Connie Lai's developer portfolio and blog made with Next.js"
+          />
+          <link rel="shortcut icon" href="/fav2.png" />
           {/* animate.css */}
           <link
             rel="stylesheet"
