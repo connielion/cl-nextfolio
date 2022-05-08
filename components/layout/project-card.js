@@ -72,10 +72,10 @@ const ProjectCard = ({ title, info, info2, img, repo, url }) => {
           )}
           {url.length > 0 ? (
             <BorderButton>
-              <a href={url ? url : "#"}>{url ? "Live" : "Coming Soon..."}</a>
+              <a href={url}>Live</a>
             </BorderButton>
           ) : (
-            <></>
+            <BorderButton>Coming soon</BorderButton>
           )}
         </Buttons>
       </TextSection>

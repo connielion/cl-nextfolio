@@ -26,9 +26,12 @@ const Btn = styled.span`
 
 const P = styled.p`
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 16px;
   @media (min-width: ${widths.laptop}) {
-    font-size: inherit;
+    font-size: 18px;
+  }
+  @media (min-width: ${widths.desktop}) {
+    font-size: 1.25rem;
   }
 `;
 
