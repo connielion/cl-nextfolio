@@ -47,14 +47,12 @@ const ImgContainer = styled.div`
   padding: 1rem;
   @media (min-width: ${widths.tab}) {
     min-width: 70%;
-    borde: 1px solid red;
     margin: 0 auto;
     padding: 2rem;
     position: relative;
   }
   @media (min-width: ${widths.tab}) {
     min-width: 50%;
-    borde: 1px solid red;
     margin: 0 auto;
     padding: 2rem;
     position: relative;

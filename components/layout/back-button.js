@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-const Button = styled.div`
+const Button = styled.span`
   padding: 4px;
   font-size: Ubuntu, sans-serif;
-  border: 1px solid red;
+  :hover {
+    color: orange;
+  }
 `;
 
 const BackButton = () => {
