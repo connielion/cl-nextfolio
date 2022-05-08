@@ -16,6 +16,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 40vh;
   @media (min-width: ${widths.laptop}) {
     margin-top: 0rem;
   }

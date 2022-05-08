@@ -41,6 +41,9 @@ const MenuLink = styled.div`
   font-size: 1.25rem;
   margin-left: 4px;
   margin-right: 4px;
+  :hover {
+    color: #ddd;
+  }
   @media ${widths.desktop} {
     font-size: 1.25rem;
   }
