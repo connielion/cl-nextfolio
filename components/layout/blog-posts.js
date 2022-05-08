@@ -1,16 +1,18 @@
 import Link from "next/link";
 import styled from "styled-components";
+import widths from "../../styling/device-sizes";
 
 // This is part of the /blog page; renders list of Post components displaying: title, date, and description
 const Container = styled.div`
-  width: 80vw;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin: 0 auto;
 `;
 
 const Article = styled.div`
-  width: 40vw;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -20,7 +22,10 @@ const Article = styled.div`
   border-radius: 0.8rem;
   margin-bottom: 0.8rem;
   :hover {
-    border: 1px solid #535467;
+    border: 2px solid #535467;
+  }
+  @media (min-width: ${widths.laptop}) {
+    width: 60%;
   }
 `;
 
