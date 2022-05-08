@@ -25,6 +25,7 @@ const TextSection = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   border: 2px dashed green;
+  margin: 2rem;
   @media (min-width: ${widths.laptop}) {
     width: 40%;
   }
@@ -36,10 +37,9 @@ const Title = styled.p`
   font-size: 2rem;
 `;
 const ImgContainer = styled.div`
-  min-width: 90%;
   margin: 0 auto;
-  padding: 0.8rem;
-
+  padding: 2rem;
+  position: relative;
   @media (min-width: ${widths.tab}) {
     min-width: 70%;
     borde: 1px solid red;
@@ -51,7 +51,7 @@ const Buttons = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // border: 1px solid pink;
+  border: 1px solid pink;
 `;
 
 const ProjectCard = ({ title, info, info2, img, repo, url }) => {

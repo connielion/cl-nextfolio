@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import widths from "../../styling/device-sizes";
 
 const Btn = styled.span`
   margin-top: 0.8rem;
@@ -25,7 +26,10 @@ const Btn = styled.span`
 
 const P = styled.p`
   margin: 0 auto;
-  font-size: inherit;
+  font-size: 18px;
+  @media (min-width: ${widths.laptop}) {
+    font-size: inherit;
+  }
 `;
 
 const BorderButton = ({ children }) => {
