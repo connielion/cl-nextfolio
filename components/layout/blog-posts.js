@@ -18,7 +18,7 @@ const Posts = ({ posts }) => {
         return (
           <Link href={"/blog/" + file.slug} key={i} passHref>
             <div style={{ border: "1px solid red" }}>
-              <h1>{title}</h1>
+              <h2>{title}</h2>
               <p>{date}</p>
               <p>{description}</p>
             </div>

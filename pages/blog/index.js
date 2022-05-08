@@ -6,8 +6,9 @@ import styled from "styled-components";
 import SectionHeading from "../../components/layout/section-heading";
 
 const BlogsContainer = styled.div`
-  padding-top: 4%;
+  padding-top: 3rem;
   width: 80vw;
+  height: 80%;
   margin: 0 auto;
   font-family: Lato, sans-serif;
 `;
@@ -15,6 +16,7 @@ const Blog = ({ posts }) => {
   return (
     <BlogsContainer>
       <SectionHeading>Connie&#39;s Tech Blog</SectionHeading>
+      {/* list of blog posts */}
       <Posts posts={posts} />
     </BlogsContainer>
   );

@@ -1,6 +1,6 @@
 const pages = [
   {
-    text: "My Portfolio",
+    text: "Portfolio",
     path: "/",
   },
   {

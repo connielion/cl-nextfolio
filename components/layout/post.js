@@ -7,8 +7,8 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const Title = styled.div`
-  font-family: "Merriweather", serif;
+const Title = styled.h2`
+  font-family: "Ubuntu", serif;
   font-weight: bold;
 `;
 
