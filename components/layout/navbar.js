@@ -13,7 +13,6 @@ const Nav = styled.div`
   justify-content: center;
   align-items: center;
   height: 20vh;
-  border: 1px dashed yellow;
 `;
 
 const Menu = styled.div`
@@ -42,6 +41,9 @@ const MenuLink = styled.div`
   font-size: 1.25rem;
   margin-left: 4px;
   margin-right: 4px;
+  :hover {
+    color: #ddd;
+  }
   @media ${widths.desktop} {
     font-size: 1.25rem;
   }

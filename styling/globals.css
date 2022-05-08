@@ -33,7 +33,7 @@ a {
 
 [data-theme="light"] {
   color: #355274;
-  background: linear-gradient(150deg, rgb(217, 229, 255), rgb(255, 252, 252));
+  background: linear-gradient(150deg, rgb(247, 249, 255), rgb(255, 252, 252));
   background-position: center;
   background-size: cover;
 }
