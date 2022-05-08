@@ -1,17 +1,16 @@
 import styled from "styled-components";
 import Image from "next/image";
 import BorderButton from "./border-button";
-import Link from "next/link";
 import widths from "../../styling/device-sizes";
 
 const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 6%;
+  padding: 4%;
   width: 80%;
   margin: 0 auto;
-  border: 1px solid yellow;
+  background-color: inherit;
   @media (max-width: ${widths.mobileL}) {
     flex-wrap: wrap;
     width: 100%;
@@ -24,7 +23,6 @@ const TextSection = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  border: 2px dashed green;
   margin: 2rem;
   @media (min-width: ${widths.laptop}) {
     width: 40%;
@@ -40,6 +38,8 @@ const ImgContainer = styled.div`
   margin: 0 auto;
   padding: 2rem;
   position: relative;
+  min-width: 100%;
+
   @media (min-width: ${widths.tab}) {
     min-width: 70%;
     borde: 1px solid red;
@@ -51,7 +51,7 @@ const Buttons = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid pink;
+  align-items: center;
 `;
 
 const ProjectCard = ({ title, info, info2, img, repo, url }) => {

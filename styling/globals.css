@@ -19,13 +19,13 @@ a {
 
 /* default theme */
 :root {
-  --background: white;
-  --foreground: black;
+  --background: rgb(217, 229, 255);
+  --foreground: #1c1e2a;
 }
 
 [data-theme="dark"] {
-  background-color: #202643;
-  background-image: linear-gradient(150deg, #08090a 0%, #161c24 100%);
+  background-color: #1c1e2a;
+  /* background-image: linear-gradient(150deg, #08090a 0%, #161c24 100%); */
   background-position: center;
   background-size: cover;
   color: rgb(137, 137, 162);

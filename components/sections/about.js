@@ -51,10 +51,13 @@ const ImageColumn = styled.div`
 `;
 
 const Text = styled.div`
-  font-size: 1rem;
+  font-size: 16px;
   padding-left: 1rem;
   @media (min-width: ${widths.tab}) {
     font-size: 1.2rem;
+  }
+  @media (min-width: ${widths.laptop}) {
+    font-size: 1.25rem;
   }
 `;
 const AboutSection = () => {

@@ -6,12 +6,14 @@ import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 const Nav = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 20vh;
+  border: 1px dashed yellow;
 `;
 
 const Menu = styled.div`
@@ -27,11 +29,9 @@ const LinksWrapper = styled.div`
   justify-content: space-evenly;
   width: 50vw;
   margin: 0 auto;
-  border: 1px solid red;
 `;
 
 const MenuLink = styled.div`
-  border: 1px dashed green;
   display: flex;
   align-items: center;
   justify-content: center;
