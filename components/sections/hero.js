@@ -8,8 +8,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 100vh;
-  height: 100%;
+  height: 100vh;
+  min-height: 100%;
   font-family: "Ubuntu", sans-serif;
   background-position: center;
   background-size: cover;
@@ -47,7 +47,7 @@ const Hero = () => {
       {/* Content start */}
       <HeroText className="animate__animated animate__fadeIn">
         Hi! I am <Colored>Connie Lai</Colored>.
-        <br />I am a <Colored>React developer.</Colored>
+        <br />I build <Colored>software with Javascript.</Colored>
         {/* cursor blinking */}
         <span className="blinking-cursor">|</span>
       </HeroText>

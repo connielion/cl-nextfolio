@@ -6,14 +6,18 @@ import widths from "../../styling/device-sizes";
 const Wrapper = styled.section`
   min-height: 100vh;
   margin-top: -30rem;
-  margin-bottom: -25rem;
+  margin-bottom: -20rem;
   padding-top: 30rem;
-  padding-bottom: 0rem;
+  padding-bottom: 0.8rem;
+  height: 100%;
   @media (min-width: ${widths.tab}) {
-    margin-top: -20rem;
+    margin-top: -30rem;
   }
   @media (min-width: ${widths.laptop}) {
     padding-bottom: 25rem;
+  }
+  @media (min-width: ${widths.desktop}) {
+    padding-bottom: 30rem;
   }
 `;
 const ProjectsSection = () => {
