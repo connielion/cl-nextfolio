@@ -11,13 +11,17 @@ const BlogsContainer = styled.div`
   height: 80%;
   margin: 0 auto;
   font-family: Lato, sans-serif;
+  display: flex;
+  justify-content: center;
 `;
 const Blog = ({ posts }) => {
   return (
     <BlogsContainer>
-      <SectionHeading>Connie&#39;s Blog</SectionHeading>
-      {/* list of blog posts */}
-      <Posts posts={posts} />
+      <div>
+        <SectionHeading>Connie&#39;s Blog</SectionHeading>
+        {/* list of blog posts */}
+        <Posts posts={posts} />
+      </div>
     </BlogsContainer>
   );
 };
