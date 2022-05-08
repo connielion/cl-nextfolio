@@ -10,7 +10,7 @@ const Container = styled.div`
 `;
 
 const Article = styled.div`
-  width: 30%;
+  width: 40vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

@@ -5,21 +5,42 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import BackButton from "../../components/layout/back-button";
-
+import styled from "styled-components";
+import widths from "../../styling/device-sizes";
 // This is the component that renders blog article content
 const components = { SyntaxHighlighter };
 
+const Container = styled.div`
+  padding: 2rem;
+  padding-top: 4.5rem;
+  width: 80vw;
+  margin: 0 auto;
+`;
+const Content = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 80%;
+  margin: 0 auto;
+  @media (min-width: ${widths.laptopL}) {
+    font-size: 1.2rem;
+  }
+`;
+
 const PostPage = ({ frontMatter: { title, description, date }, mdxSource }) => {
   return (
-    <div>
-      <h1>{title}</h1>
-      <p>{date}</p>
-      <p>{description}</p>
-
-      <MDXRemote {...mdxSource} components={components} />
-
+    <Container>
       <BackButton backTo={"/blog"} />
-    </div>
+      <Content>
+        <div>
+          <h1>{title}</h1>
+          <p>{date}</p>
+          <p>{description}</p>
+
+          <MDXRemote {...mdxSource} components={components} />
+        </div>
+      </Content>
+    </Container>
   );
 };
 
