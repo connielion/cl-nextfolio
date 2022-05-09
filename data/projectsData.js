@@ -25,7 +25,7 @@ export const projects = [
     title: "ToadTV",
     info: "A responsive front-end React app displaying movie data from OMDB API.",
     info2:
-      "Features of the app includes searching by title, viewing details such as, movie rating, plot, actors, and genres",
+      "Features of the app includes searching by title, viewing details such as, movie rating, plot, actors, and genres.",
     url: "https://toadtv-b4454.web.app/",
     repo: "https://github.com/Lap343/2021-React-Apprenticeship/tree/development/movie-app",
   },
@@ -33,7 +33,7 @@ export const projects = [
     id: nanoid(),
     img: "/images/projects/auxpack.png",
     title: "Auxpack",
-    info: "A dashboard built with D3.js and React for monitoring Webpack build stats.",
+    info: "A Webpack plug-in with dashboard built with D3.js and React showing Webpack build stats (i.e. treeshakable modules, ).",
     info2:
       "Auxpack a configurable Webpack plugin that monitors statistics from your production builds. It allows developers to better understand bundle composition to get a better grasp on optimization strategies.",
     url: "",

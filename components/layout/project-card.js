@@ -28,6 +28,10 @@ const TextSection = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   margin: 1rem;
+  @media (min-width: ${widths.tab}) {
+    width: 60%;
+    font-size: 1.2rem;
+  }
   @media (min-width: ${widths.laptop}) {
     width: 40%;
     font-size: 1.2rem;
@@ -52,7 +56,7 @@ const ImgContainer = styled.div`
     position: relative;
   }
   @media (min-width: ${widths.tab}) {
-    min-width: 50%;
+    min-width: 70%;
     margin: 0 auto;
     padding: 2rem;
     position: relative;
@@ -67,7 +71,7 @@ const Buttons = styled.div`
   justify-content: space-between;
   align-items: center;
   @media (min-width: ${widths.tab}) {
-    width: 40%;
+    width: 60%;
     margin: 0;
   }
 `;
