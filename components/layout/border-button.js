@@ -13,7 +13,7 @@ const Btn = styled.span`
   line-height: 1;
   display: flex;
   jusify-content: center;
-  padding: 0.8rem;
+  padding: 0.6rem;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
   &:hover {
     -webkit-text-fill-color: #a9bed2;
@@ -21,6 +21,9 @@ const Btn = styled.span`
     &::after {
       width: 100%;
     }
+  }
+  @media (min-width: ${widths.tab}) {
+    margin: 1rem;
   }
 `;
 

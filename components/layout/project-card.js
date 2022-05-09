@@ -39,7 +39,7 @@ const TextSection = styled.div`
   }
 `;
 
-const Title = styled.p`
+const Title = styled.h1`
   font-family: "Lato", sans-serif;
   font-weight: bold;
   font-size: 1.25rem;
@@ -64,16 +64,19 @@ const ImgContainer = styled.div`
   }
 `;
 const Buttons = styled.div`
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 0 2rem 0 2rem;
   @media (min-width: ${widths.tab}) {
-    width: 60%;
+    justify-content: flex-start;
+    width: 40%;
     margin: 0;
+    padding: 0;
   }
 `;
 
