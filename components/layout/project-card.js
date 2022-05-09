@@ -10,7 +10,6 @@ const Container = styled.div`
   padding: 0.5rem;
   width: 100%;
   margin: 0 auto;
-  background-color: inherit;
   @media (min-width: ${widths.laptop}) {
     display: flex;
     flex-direction: row;
