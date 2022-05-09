@@ -27,7 +27,7 @@ const Btn = styled.span`
   }
 `;
 
-const P = styled.p`
+const ButtonText = styled.p`
   margin: 0 auto;
   font-size: 16px;
   @media (min-width: ${widths.laptop}) {
@@ -41,7 +41,7 @@ const P = styled.p`
 const BorderButton = ({ children }) => {
   return (
     <Btn>
-      <P>{children}</P>
+      <ButtonText>{children}</ButtonText>
     </Btn>
   );
 };
