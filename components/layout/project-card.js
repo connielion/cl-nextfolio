@@ -15,8 +15,9 @@ const Container = styled.div`
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: no-wrap;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    padding: 0 6rem;
   }
 `;
 
@@ -46,16 +47,17 @@ const Title = styled.p`
   }
 `;
 const ImgContainer = styled.div`
-  min-width: 100%;
+  min-width: 70%;
   padding: 1rem;
+
   @media (min-width: ${widths.tab}) {
     min-width: 70%;
     margin: 0 auto;
     padding: 2rem;
     position: relative;
   }
-  @media (min-width: ${widths.tab}) {
-    min-width: 70%;
+  @media (min-width: ${widths.laptop}) {
+    min-width: 50%;
     margin: 0 auto;
     padding: 2rem;
     position: relative;
