@@ -3897,12 +3897,17 @@
     "vfile" "^5.3.0"
     "vfile-matter" "^3.0.1"
 
+"next-seo@^5.4.0":
+  "integrity" "sha512-R9DhajPwJnR/lsF2hZ8cN8uqr5CVITsRrCG1AF5+ufcaybKYOvnH8sH9MaH4/hpkps3PQ9H71S7J7SPYixAYzQ=="
+  "resolved" "https://registry.npmjs.org/next-seo/-/next-seo-5.4.0.tgz"
+  "version" "5.4.0"
+
 "next-themes@^0.1.1":
   "integrity" "sha512-Iqxt6rhS/KfK/iHJ0tfFjTcdLEAI0AgwFuAFrMwLOPK5e+MI3I+fzyvBoS+VaOS+NldUiazurhgwYhrfV0VXsQ=="
   "resolved" "https://registry.npmjs.org/next-themes/-/next-themes-0.1.1.tgz"
   "version" "0.1.1"
 
-"next@>=10.2.0", "next@>=11.1.1", "next@12.1.6":
+"next@^8.1.1-canary.54 || >=9.0.0", "next@>=10.2.0", "next@>=11.1.1", "next@12.1.6":
   "integrity" "sha512-cebwKxL3/DhNKfg9tPZDQmbRKjueqykHHbgaoG4VBRH3AHQJ2HO0dbKFiS1hPhe1/qgc2d/hFeadsbPicmLD+A=="
   "resolved" "https://registry.npmjs.org/next/-/next-12.1.6.tgz"
   "version" "12.1.6"

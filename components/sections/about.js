@@ -19,7 +19,7 @@ const Wrapper = styled.section`
   padding-bottom: 2.5rem;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-  padding: 4.5rem;
+  width: 100%;
   @media (min-width: ${widths.laptop}) {
     height: 100vh;
     padding: 1rem 2rem 5rem 2rem;
@@ -32,8 +32,8 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 0;
-  width: 100%;
+  padding: 0.8rem;
+  padding: 0 0.2rem 1rem 0.2rem;
   @media (min-width: ${widths.tab}) {
     flex-direction: row;
     margin: 0 auto;
@@ -43,10 +43,12 @@ const Content = styled.div`
 
 const ImageColumn = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+  height: 100%;
+  padding: 0 0.8rem 0.2rem 0.8rem;
   @media (min-width: ${widths.laptop}) {
     padding: 0.5rem;
     margin: 0 2rem 2rem 2rem;

@@ -6,14 +6,13 @@ const Btn = styled.span`
   background-image: linear-gradient(135deg, #3c50c1 0%, #22b6b3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  border: 2px solid;
   border-image: linear-gradient(135deg, #3c50c1 0%, #22b6b3 100%);
   border-image-slice: 1;
   font-weight: bold;
   line-height: 1;
   display: flex;
   jusify-content: center;
-  padding: 0.8rem;
+  padding: 0.6rem;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
   &:hover {
     -webkit-text-fill-color: #a9bed2;
@@ -22,9 +21,12 @@ const Btn = styled.span`
       width: 100%;
     }
   }
+  @media (min-width: ${widths.tab}) {
+    margin: 1rem;
+  }
 `;
 
-const P = styled.p`
+const ButtonText = styled.p`
   margin: 0 auto;
   font-size: 16px;
   @media (min-width: ${widths.laptop}) {
@@ -38,7 +40,7 @@ const P = styled.p`
 const BorderButton = ({ children }) => {
   return (
     <Btn>
-      <P>{children}</P>
+      <ButtonText>{children}</ButtonText>
     </Btn>
   );
 };

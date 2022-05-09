@@ -7,6 +7,7 @@ const Heading = styled.h2`
   font-size: 1.5rem;
   font-weight: bold;
   font-family: "Ubuntu", sans-serif;
+  padding-top: 2.5rem;
   @media (min-width: ${widths.tab}) {
     font-size: 2.8rem;
   }

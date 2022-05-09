@@ -10,31 +10,36 @@ const Container = styled.div`
   padding: 0.5rem;
   width: 100%;
   margin: 0 auto;
-  background-color: inherit;
   @media (min-width: ${widths.laptop}) {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: no-wrap;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 6rem;
   }
 `;
 
 const TextSection = styled.div`
   font-family: "Lato", sans-serif;
-  font-size: 1.12rem;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin: 1rem;
+  @media (min-width: ${widths.tab}) {
+    width: 60%;
+    font-size: 1.2rem;
+  }
   @media (min-width: ${widths.laptop}) {
     width: 40%;
     font-size: 1.2rem;
+    padding-left: 5rem;
   }
 `;
 
-const Title = styled.p`
+const Title = styled.h1`
   font-family: "Lato", sans-serif;
   font-weight: bold;
   font-size: 1.25rem;
@@ -45,30 +50,33 @@ const Title = styled.p`
 const ImgContainer = styled.div`
   min-width: 100%;
   padding: 1rem;
+
   @media (min-width: ${widths.tab}) {
     min-width: 70%;
     margin: 0 auto;
     padding: 2rem;
     position: relative;
   }
-  @media (min-width: ${widths.tab}) {
+  @media (min-width: ${widths.laptop}) {
     min-width: 50%;
     margin: 0 auto;
-    padding: 2rem;
     position: relative;
   }
 `;
 const Buttons = styled.div`
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 0 2rem 0 2rem;
   @media (min-width: ${widths.tab}) {
+    justify-content: flex-start;
     width: 40%;
     margin: 0;
+    padding: 0;
   }
 `;
 
