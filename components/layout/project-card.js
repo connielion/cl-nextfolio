@@ -13,9 +13,9 @@ const Container = styled.div`
   @media (min-width: ${widths.laptop}) {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: no-wrap;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 0 6rem;
   }
@@ -23,7 +23,7 @@ const Container = styled.div`
 
 const TextSection = styled.div`
   font-family: "Lato", sans-serif;
-  font-size: 1.12rem;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -35,6 +35,7 @@ const TextSection = styled.div`
   @media (min-width: ${widths.laptop}) {
     width: 40%;
     font-size: 1.2rem;
+    padding-left: 5rem;
   }
 `;
 
@@ -47,7 +48,7 @@ const Title = styled.p`
   }
 `;
 const ImgContainer = styled.div`
-  min-width: 70%;
+  min-width: 100%;
   padding: 1rem;
 
   @media (min-width: ${widths.tab}) {
@@ -59,7 +60,6 @@ const ImgContainer = styled.div`
   @media (min-width: ${widths.laptop}) {
     min-width: 50%;
     margin: 0 auto;
-    padding: 2rem;
     position: relative;
   }
 `;
