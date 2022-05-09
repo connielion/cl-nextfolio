@@ -6,6 +6,7 @@ const Btn = styled.span`
   background-image: linear-gradient(135deg, #3c50c1 0%, #22b6b3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  border: 2px solid;
   border-image: linear-gradient(135deg, #3c50c1 0%, #22b6b3 100%);
   border-image-slice: 1;
   font-weight: bold;
