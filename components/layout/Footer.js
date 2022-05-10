@@ -7,12 +7,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-const Nav = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 20vh;
+  @media (min-width: ${widths.mobileL}) {
+    height: 30vh;
+    padding-top: 0.8rem;
+  }
 `;
 
 const Menu = styled.div`
@@ -49,11 +53,11 @@ const MenuLink = styled.div`
   }
 `;
 
-const Navbar = () => {
+const Footer = () => {
   const router = useRouter(); // for conditional rendering of nav links
 
   return (
-    <Nav>
+    <Container>
       <Menu>
         {/* bottom links */}
         <LinksWrapper>
@@ -80,7 +84,7 @@ const Navbar = () => {
         </LinksWrapper>
       </Menu>
       <p>© 2022 - Connie Lai</p>
-    </Nav>
+    </Container>
   );
 };
-export default Navbar;
+export default Footer;
