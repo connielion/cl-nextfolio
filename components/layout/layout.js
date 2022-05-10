@@ -1,10 +1,11 @@
-import Navbar from "./navbar";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-regular-svg-icons";
 import widths from "../../styling/device-sizes";
+import Footer from "./Footer";
+
 const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -59,7 +60,7 @@ const Layout = ({ children }) => {
       </ThemeButton>
       <Content>{children}</Content>
       {/* bottom nav */}
-      <Navbar />
+      <Footer />
     </Container>
   );
 };
