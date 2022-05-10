@@ -16,13 +16,12 @@ const Wrapper = styled.section`
   background-size: cover;
   color: #eee;
   height: auto;
-  padding-bottom: 2.5rem;
+  padding-bottom: 3.5rem;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
   width: 100%;
   @media (min-width: ${widths.laptop}) {
-    height: 100vh;
-    padding: 1rem 2rem 5rem 2rem;
+    padding: 1rem 2rem 10rem 2rem;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   }
@@ -32,12 +31,11 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 0.8rem;
-  padding: 0 0.2rem 1rem 0.2rem;
+  padding: 0 1rem 4rem 0.6rem;
   @media (min-width: ${widths.tab}) {
     flex-direction: row;
     margin: 0 auto;
-    width: 80vw;
+    width: 90vw;
   }
 `;
 
