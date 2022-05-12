@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import Posts from "../../components/layout/blog-posts";
 import styled from "styled-components";
 import SectionHeading from "../../components/layout/section-heading";
-
+import { NextSeo } from "next-seo";
 const BlogsContainer = styled.div`
   padding-top: 3rem;
   width: 80vw;
@@ -15,8 +15,11 @@ const BlogsContainer = styled.div`
   justify-content: center;
 `;
 const Blog = ({ posts }) => {
+  const title = "Connie's Tech Blog";
+  const description = "Connie Lai, tech blog/portfolio";
   return (
     <BlogsContainer>
+      <NextSeo title={title} description={description} />
       <div>
         <SectionHeading>Connie&#39;s Blog</SectionHeading>
         {/* list of blog posts */}
