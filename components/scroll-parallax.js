@@ -44,6 +44,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 80vw;
+  margin: 0 auto;
 `;
 const Spinner = () => {
   const parallax = useParallax({

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { date } from "../../util/date";
-
+import { NextSeo } from "next-seo";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -16,10 +16,10 @@ const Content = styled.div`
   font-family: "Lato", sans-serif;
 `;
 
-const PostLayout = ({ children }) => {
+const PostLayout = ({ children, title = "A post from Connie's Tech Blog" }) => {
   return (
     <Container>
-      <Title>Post Title: </Title>
+      <Title>Post Title here: {title}</Title>
       <p>Date: {date}</p>
       <Content>{children}</Content>
     </Container>
