@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
                 title: "Connie Lai | Developer Portfolio",
                 description:
                   "Connie Lai full-stack developer portfolio. Love to draw and travel in my free time.",
-                images: ["/images/og-image."],
+                images: ["/og.png"],
               }}
               twitter={{
                 handle: "@connielion011",
