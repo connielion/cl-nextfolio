@@ -13,14 +13,23 @@ function MyApp({ Component, pageProps }) {
         <Layout>
           <Head>
             <NextSeo
-              title="Connie Lai | Developer Portfolio"
-              description="Connie Lai full-stack developer portfolio. Love to draw and travel in my free time."
+              title="Connie Lai | Dev Portfolio"
+              titleTemplate="Connie Lai | Dev Portfolio"
+              defaultTitle="Connie Lai | Dev Portfolio"
+              description="Connie Lai, a full-stack software engineer. Love to draw and travel in my free time."
               openGraph={{
                 url: "https://www.connielai.dev",
                 title: "Connie Lai | Developer Portfolio",
                 description:
-                  "Connie Lai full-stack developer portfolio. Love to draw and travel in my free time.",
-                images: ["/og.png"],
+                  "Connie Lai, a full-stack developer portfolio. Love to draw, listening to music, learn languages, and travel in my free time.",
+                images: [
+                  {
+                    url: "/og.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "Connie Lai",
+                  },
+                ],
               }}
               twitter={{
                 handle: "@connielion011",
