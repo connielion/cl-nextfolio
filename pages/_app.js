@@ -13,8 +13,20 @@ function MyApp({ Component, pageProps }) {
         <Layout>
           <Head>
             <NextSeo
-              title="Connie's Dev Portfolio/Blog"
-              description="Connie Lai react developer portfolio with MDX blog made with Next.js"
+              title="Connie Lai | Developer Portfolio"
+              description="Connie Lai full-stack developer portfolio. Love to draw and travel in my free time."
+              openGraph={{
+                url: "https://www.connielai.dev",
+                title: "Connie Lai | Developer Portfolio",
+                description:
+                  "Connie Lai full-stack developer portfolio. Love to draw and travel in my free time.",
+                images: ["/images/og-image."],
+              }}
+              twitter={{
+                handle: "@connielion011",
+                site: "@connielion011",
+                cardType: "summary_large_image",
+              }}
             />
             {/* UNCOMMENT ONCE SEO CONFIG IS READY */}
             {/* <DefaultSeo {...SEO} /> */}

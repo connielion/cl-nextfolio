@@ -47,7 +47,8 @@ const Hero = () => {
       {/* Content start */}
       <HeroText className="animate__animated animate__fadeIn">
         Hi! I am <Colored>Connie Lai</Colored>.
-        <br />I build <Colored>software with Javascript.</Colored>
+        <br />
+        <Colored>I Design and Build Apps.</Colored>
         {/* cursor blinking */}
         <span className="blinking-cursor">|</span>
       </HeroText>

@@ -4,8 +4,11 @@ import widths from "../../styling/device-sizes";
 import pages from "../../util/navLinks";
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Container = styled.div`
   display: flex;
@@ -30,8 +33,11 @@ const LinksWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 50vw;
+  width: 80vw;
   margin: 0 auto;
+  @media (min-width: ${widths.laptop}) {
+    width: 50vw;
+  }
 `;
 
 const MenuLink = styled.div`
@@ -79,6 +85,14 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+          </MenuLink>
+          <MenuLink>
+            <a
+              href="https://www.twitter.com/connielion011/"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faTwitter} />
             </a>
           </MenuLink>
         </LinksWrapper>
