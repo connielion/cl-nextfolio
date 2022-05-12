@@ -20,6 +20,7 @@ const HeroText = styled.div`
   width: 70vw;
   flex-wrap: wrap;
   text-align: center;
+  padding-bottom: 0.8rem;
   @media (max-width: ${widths.desktop}) {
     font-size: 5rem;
   }
