@@ -55,10 +55,16 @@ const Hero = () => {
       </HeroText>
       {/* View Projects button */}
       <BorderButton>
-        {" "}
         <Link href="/#projects-section" scroll={false}>
           View Projects
         </Link>
+      </BorderButton>
+      {/* View resume */}
+      <BorderButton>
+        {" "}
+        <a href="https://drive.google.com/file/d/1Ke7jJN6d59fYHcbM1bwgYwwvDfUyLmKl/view?usp=sharing" scroll="false" target="_blank" rel="noreferrer">
+        My Resume
+        </a>
       </BorderButton>
     </Container>
   );
