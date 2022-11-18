@@ -35,7 +35,7 @@ const HeroText = styled.div`
   }
 `;
 
-const Colored = styled.span`
+export const Colored = styled.span`
   background-image: linear-gradient(135deg, #3c50c1 0%, #22b6b3 100%);
   background-clip: inherit;
   -webkit-background-clip: text;
@@ -58,13 +58,6 @@ const Hero = () => {
         <Link href="/#projects-section" scroll={false}>
           View Projects
         </Link>
-      </BorderButton>
-      {/* View resume */}
-      <BorderButton>
-        {" "}
-        <a href="https://drive.google.com/file/d/1Ke7jJN6d59fYHcbM1bwgYwwvDfUyLmKl/view?usp=sharing" scroll="false" target="_blank" rel="noreferrer">
-        My Resume
-        </a>
       </BorderButton>
     </Container>
   );

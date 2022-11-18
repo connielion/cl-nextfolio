@@ -1,0 +1,28 @@
+---
+title: Re-learning Angular (Part 1)
+date: "November, 2022"
+description:
+thumbnail: "angular14"
+tags: ["mdx", "react", "angular14"]
+---
+
+2018 was when I started diving into Javascript frameworks and libraries (and coding really). Angular 4 (?) happened to be the very first I was exposed to. It was kind of overwhelming for me as someone who has only just started coding a few months (mostly self-taught), especially observables. So, I decided to try Vue, then React. Since then, I have been using React for side projects and attended a software engineering immersive program that taught MERN, Postgre, some DevOps, and testing with Jest and Enzyme.
+
+It's now late 2022 and I decided to finally make a project with Angular again. I don't really remember much from 2018, besides there is CLI that makes things easier for developers, haha.
+
+I installed `v.16.10` of node using <strong>`nvm install 16.10`</strong> and Angular CLI to set up my first new Angular project since 2018. I believe I was somewhat intimiated by `class` and typescript syntax too back then. It doesn't look so bad now.
+
+The steps to set up an Angular project is very simple.
+
+1. First, follow <strong>[these steps](https://github.com/angular/angular-cli/releases#prerequisites)</strong> to install the appropriate Node version and CLI. Running <code>npm install -g @angular/cli</code> will install the CLI globally on your machine.
+
+2. Using the command line, navigate to where you want your project to be made. Run <strong>`ng new project-name-here`</strong>. Then you will see and select whatever options the CLI asks, and press `Enter`. CLI will generate the project directory for you.
+
+3. `cd project-name-here` to enter your project's folder.
+
+4. Run <strong>`ng serve -o`</strong> to build and run your project locally. `-o` is for openning your project in your browser.
+
+Creating components is as easy as running this command: `ng g c components/component-name`. The 'g c' part of <strong> `ng g c [path]`</strong> is just shorthand for `generate component` I guess. You'll then see a `component-name` directory inside `components` folder.
+Inside it, you should see 3 files, like so:
+
+<img src="/images/angular14.png" />

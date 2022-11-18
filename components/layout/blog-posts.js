@@ -18,8 +18,7 @@ const Article = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0.8rem;
-  border: 1px solid #a2a2a2;
-  border-radius: 0.8rem;
+  border-bottom: #ddd;
   margin-bottom: 0.8rem;
   :hover {
     border: 2px solid #535467;

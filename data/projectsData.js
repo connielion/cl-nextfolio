@@ -1,5 +1,16 @@
 import { nanoid } from "nanoid";
+
 export const projects = [
+  {
+    id: nanoid(),
+    img: "/images/projects/listing-alert.png",
+    title: "Listing Alert",
+    info: "A web app for realtors and real estate companies to manage property listings & agents, receive notifications, etc.",
+    info2:
+      "This app is built using React, Node, MongoDB, GraphQL, and recently re-designed using Ant Design components. Unfortunately, the code repository is private.",
+    url: "https://listing-alert.com/",
+    repo: "",
+  },
   {
     id: nanoid(),
     img: "/images/projects/kovvi-la_data.png",
