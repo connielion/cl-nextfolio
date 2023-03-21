@@ -5,6 +5,7 @@ import Posts from "../../components/layout/blog-posts";
 import styled from "styled-components";
 import SectionHeading from "../../components/layout/section-heading";
 import { NextSeo } from "next-seo";
+import { Colored } from "../../components/sections/hero";
 const BlogsContainer = styled.div`
   padding-top: 3rem;
   width: 80vw;
@@ -13,15 +14,25 @@ const BlogsContainer = styled.div`
   font-family: Lato, sans-serif;
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
+
 const Blog = ({ posts }) => {
   const title = "Connie's Tech Blog";
   const description = "Connie Lai, tech blog/portfolio";
   return (
     <BlogsContainer>
       <NextSeo title={title} description={description} />
+
       <div>
-        <SectionHeading>Connie&#39;s Blog</SectionHeading>
+        <SectionHeading>
+          {" "}
+          <Colored>
+            Connie&#39;s Tech Blog
+            {/* <SectionHeading>Connie&#39;s Tech Blog</SectionHeading> */}
+          </Colored>
+        </SectionHeading>
+
         {/* list of blog posts */}
         <Posts posts={posts} />
       </div>
