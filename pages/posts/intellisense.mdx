@@ -1,0 +1,28 @@
+---
+title: Fix: Intellisense not working after restart/re-install 
+date: "March 25, 2023"
+description: Fix for intellisense not working in VS Code
+thumbnail: "none"
+tags: ["js", "extensions", "vs code"]
+---
+
+## Fix: Intellisense not working after restart/re-install
+
+The reason why I am writing this is because of the issue I encountered yesterday. I got a new M2 chip Macbook Air, installed VS Code, started a T3 app project.
+When I was coding on VS Code, I noticed that the intellisense was not working. It was not suggesting anything, no definitions when I hover over methods, etc.
+
+So, the steps I've tried includes:
+- Re-installing VS Code
+- Restarting laptop
+
+However, none of this fixed the issue. So, after catching some z's, I googled and fortunately found this [answer on Stackoverflow.](https://stackoverflow.com/questions/57770473/how-to-enable-hover-in-vs-code), which solved my issue.
+It turns out that the built-in extension, <strong>Typescript and Javascript Language Features</strong> was not enabled. 
+
+Steps to fix:
+1. Open <strong>Extensions</strong> in VS Code sidebar.
+2. Search for <strong>@bulitin</strong>. You can hide Themes and Programming Languages sections.
+3. Under <strong>Features</strong>, scroll down to the bottom and click on <strong>Typescript and Javascript Language Features</strong>. 
+4. Enable the extension. 
+5. Go back to your JS/TS file. The issue should be fixed.
+
+Happy coding (at ungodly hours in the morning).
