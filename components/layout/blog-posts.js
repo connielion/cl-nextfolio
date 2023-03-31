@@ -21,7 +21,9 @@ const Article = styled.div`
   border-bottom: #ddd;
   margin-bottom: 0.8rem;
   :hover {
-    border: 2px solid #535467;
+    border-radius: 2rem;
+    cursor: pointer;
+    background-color: #eaeefa;
   }
   @media (min-width: ${widths.laptop}) {
     width: 60%;
@@ -42,6 +44,11 @@ const Tag = styled.span`
   margin: 0.2rem;
 `;
 const Posts = ({ posts }) => {
+  // sort posts by dates
+  posts.sort((a, b) => {
+    return new Date(a.frontMatter.date) - new Date(b.frontMatter.date);
+  })
+
   return (
     <Container>
       {posts?.map((file, i) => {
